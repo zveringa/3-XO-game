@@ -1,11 +1,12 @@
 import React from 'react';
 import { InfoLayout } from './info-layout';
 import { PLAYER_ACTION, PLAYER_NAME, STATUS } from '../../constants';
-
-import { useReduxState } from '../../redux-manager';
+import { selectStatus, selectCurrentPlayer } from '../../selectors';
+import { useSelector } from 'react-redux';
 
 export const Info = () => {
-	const { status, currentPlayer } = useReduxState();
+	const status = useSelector(selectStatus);
+	const currentPlayer = useSelector(selectCurrentPlayer);
 	const playerAction = PLAYER_ACTION[status];
 	const playerName = PLAYER_NAME[currentPlayer];
 
