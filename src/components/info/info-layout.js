@@ -1,10 +1,13 @@
 import React from 'react';
-import styles from './info.module.css';
-import PropTypes from 'prop-types';
 
-export const InfoLayout = ({ information }) => {
-	return <div className={styles.info}>{information}</div>;
-};
+import PropTypes from 'prop-types';
+import { Component } from 'react';
+
+export class InfoLayout extends Component {
+	render() {
+		return <div>{rthis.props.information}</div>;
+	}
+}
 
 InfoLayout.propTypes = {
 	information: PropTypes.string,
