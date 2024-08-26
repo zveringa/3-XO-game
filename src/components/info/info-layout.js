@@ -5,7 +5,7 @@ import { Component } from 'react';
 
 export class InfoLayout extends Component {
 	render() {
-		return <div>{rthis.props.information}</div>;
+		return <div>{this.props.information}</div>;
 	}
 }
 
